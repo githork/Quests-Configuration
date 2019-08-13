@@ -7,8 +7,7 @@
 # BlockPlaceEvent,(Material of Block),(Amount)
 # EntityDamageByEntityEvent,(Material of Weapon),(Entity Type),(Amount)
 # EntityDamageEvent,(Material of Weapon),(Damage Cause),(Amount)
-# EntityDeathEvent,(Material of Weapon),(Damage Cause),(Entity Type),(Amount)
-# PlayerDeathEvent,(Material of Weapon),(Damage Cause),(Amount)
+# EntityDeathEvent,(Material of Weapon),(Damage Cause),(Entity Type),(Entity Custom Name),(Amount)
 # PlayerPickupItemEvent,(Material of Item),(Amount)
 # ProjectileLaunchEvent,(Material of Projectile),(Amount)
 #
@@ -496,7 +495,7 @@ quests:
     material: "SKULL_ITEM"
     repeatable: false
     objectives:
-      - "PlayerDeathEvent,ANY,ANY,1"
+      - "EntityDeathEvent,ANY,ANY,PLAYER,ANY,1"
     commands:
       - "eco give %player% 10"
 
@@ -518,7 +517,7 @@ quests:
     repeatable: false
     depend: "killer1"
     objectives:
-      - "PlayerDeathEvent,ANY,ANY,16"
+      - "EntityDeathEvent,ANY,ANY,PLAYER,ANY,16"
     commands:
       - "eco give %player% 20"
 
@@ -540,7 +539,7 @@ quests:
     repeatable: false
     depend: "killer2"
     objectives:
-      - "PlayerDeathEvent,ANY,ANY,32"
+      - "EntityDeathEvent,ANY,ANY,PLAYER,ANY,32"
     commands:
       - "eco give %player% 40"
 
@@ -562,7 +561,7 @@ quests:
     repeatable: false
     depend: "killer3"
     objectives:
-      - "PlayerDeathEvent,ANY,ANY,64"
+      - "EntityDeathEvent,ANY,ANY,PLAYER,ANY,64"
     commands:
       - "eco give %player% 80"
 
@@ -584,7 +583,7 @@ quests:
     repeatable: false
     depend: "killer4"
     objectives:
-      - "PlayerDeathEvent,ANY,ANY,128"
+      - "EntityDeathEvent,ANY,ANY,PLAYER,ANY,128"
     commands:
       - "eco give %player% 160"
 
@@ -606,7 +605,7 @@ quests:
     repeatable: false
     depend: "killer5"
     objectives:
-      - "PlayerDeathEvent,ANY,ANY,256"
+       - "EntityDeathEvent,ANY,ANY,PLAYER,ANY,256"
     commands:
       - "eco give %player% 320"
 
@@ -628,7 +627,7 @@ quests:
     repeatable: false
     depend: "killer6"
     objectives:
-      - "PlayerDeathEvent,ANY,ANY,512"
+      - "EntityDeathEvent,ANY,ANY,PLAYER,ANY,512"
     commands:
       - "eco give %player% 640"
   #
@@ -1172,7 +1171,7 @@ quests:
     material: "SKULL_ITEM"
     repeatable: true
     objectives:
-      - "PlayerDeathEvent,ANY,VOID,PLAYER,5"
+      - "EntityDeathEvent,ANY,VOID,PLAYER,ANY,5"
     commands:
       - "eco give %player% 20"
 
