@@ -1,0 +1,8 @@
+name: Quests
+main: twolovers.quests.bukkit.Quests
+version: 0.0.2
+author: 2LS
+commands:
+  quests:
+    description: Main Quests command
+    aliases: []
